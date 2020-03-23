@@ -1,5 +1,8 @@
-class Welcome extends React.Component {
+import React from "react";
+
+class Movie extends React.Component {
   render() {
-    return <h1>Hello, {this.props.name}</h1>;
+    return <h1>Movies, {this.props.name}</h1>;
   }
 }
+export default Movie;
