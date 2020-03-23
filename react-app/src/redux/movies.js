@@ -1,3 +1,5 @@
+import moviesList from "/components/moviesList.js"
+
 export function addMovie(movie) {
     return {
         type: "ADD_MOVIE",
@@ -12,7 +14,8 @@ export function deleteMovie(movie) {
     }
 }
 
-function movieReducer(movies = [], action) {
+function movieReducer(movies = moviesList, action) {
+    console.log(movies)
     switch(action.type) {
         case "ADD_MOVIE":
             return [...movies, action.payload]
