@@ -1,4 +1,4 @@
-import moviesList from "/components/moviesList.js"
+import moviesList from "../components/movieList"
 
 export function addMovie(movie) {
     return {

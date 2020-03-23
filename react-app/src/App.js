@@ -5,15 +5,16 @@ import Movies from "./components/Movies";
 import TVShows from "./components/TVShows.js";
 import { Route, Switch } from "react-router-dom";
 import { createStore, combineReducers, getState } from "redux";
-import moviesReducerModule from "./Reducers/moviesReducer";
-import tvshowsReducerModule from "./Reducers/tvshowsReducer";
+import moviesReducerModule from "./redux/movies";
+import tvshowsReducerModule from "./redux/shows";
+
 
 function App() {
   let combinedReducer = combineReducers({
     movies: moviesReducerModule.reducer,
     tvshows: tvshowsReducerModule.reducer
   });
-
+console.log(combinedReducer)
   const store = createStore(combinedReducer);
 
   store.dispatch({
