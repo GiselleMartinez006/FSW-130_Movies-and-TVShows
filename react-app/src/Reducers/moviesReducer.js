@@ -42,4 +42,8 @@ const moviesReducer = (state = moviesDefaultState, action) => {
 };
 
 module.exports.reducer = moviesReducer;
+<<<<<<< HEAD
+export default moviesReducer;
+=======
 export default moviesReducer
+>>>>>>> 4c9d5650928c096e9a8a71c6344c626dcb8dafc5
