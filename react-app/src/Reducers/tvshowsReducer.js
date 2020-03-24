@@ -33,3 +33,4 @@ const tvshowsReducer = (state = tvshowsDefaultState, action) => {
 };
 
 module.exports.reducer = tvshowsReducer;
+export default tvshowsReducer
