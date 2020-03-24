@@ -15,7 +15,7 @@ export function deleteMovie(movie) {
 }
 
 function movieReducer(movies = moviesList, action) {
-    console.log(movies)
+    // console.log(movies)
     switch(action.type) {
         case "ADD_MOVIE":
             return [...movies, action.payload]
