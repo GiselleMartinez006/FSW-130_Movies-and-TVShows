@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import Home from "./components/Home";
 import Movies from "./components/Movies";
-import TVShows from "./components/TVShows.js";
-import { Route, Switch } from "react-router-dom";
+import TVShows from "./components/TVShows";
+import { Switch, Route } from "react-router-dom";
 import { createStore, combineReducers, getState } from "redux";
 import moviesReducerModule from "./redux/movies";
 import tvshowsReducerModule from "./redux/shows";
@@ -38,6 +38,7 @@ console.log(combinedReducer)
 
   return (
     <main>
+      test
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/movies" component={Movies} />
