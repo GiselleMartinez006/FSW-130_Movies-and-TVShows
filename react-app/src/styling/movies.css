@@ -1,0 +1,37 @@
+html {
+  background: url("https://ae01.alicdn.com/kf/HTB1cNRYn2DH8KJjy1Xcq6ApdXXa3/Wooden-texture-light-wood-background-wood-Photography-Backdrop-Background-newborn-props-XT-6459.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+.movies {
+  border-bottom: 5px solid brown;
+  background: rgba(255, 255, 255, 0.411);
+}
+
+.mainHeading {
+  font-size: 5em;
+  text-decoration: underline;
+  color: rgb(68, 54, 54);
+  font-family: georgia;
+}
+
+h1 {
+  color: #800000;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media only screen and (max-width: 500px) {
+  .mainHeading {
+    font-size: 2.5em;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 1em;
+  }
+}
