@@ -4,18 +4,12 @@ import Home from "./components/Home";
 import Movies from "./components/movieComponent";
 import TVShows from "./components/tvShowsComponent";
 import { Switch, Route } from "react-router-dom";
-import { createStore, combineReducers, getState } from "redux";
-import moviesReducerModule from "./redux/movies";
-import tvshowsReducerModule from "./redux/shows";
+// import { createStore, combineReducers, getState } from "redux";
+// import moviesReducerModule from "./redux/movies";
+// import tvshowsReducerModule from "./redux/shows";
 import { connect } from "react-redux";
 
 function App(props) {
-  let combinedReducer = combineReducers({
-    movies: moviesReducerModule,
-    tvshows: tvshowsReducerModule
-  });
-  const store = createStore(combinedReducer);
-  console.log(store);
   // store.dispatch({
   //   type: "ADD_MOVIE",
   //   payload: {
@@ -37,12 +31,12 @@ function App(props) {
 
   return (
     <main>
-      test {console.log(props)}
-      {props.movies[0].title}
+      {console.log(props)}
+     
       <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/movies" component={Movies} />
-        <Route path="/tvshow" component={TVShows} />
+        <Route exact path="/" exact render={() => <Home />} />
+        <Route exact path="/movies" exact render={() => <Movies movieArray={props.movies} />} />
+        <Route path="/tvshows" component={TVShows} />
       </Switch>
     </main>
   );
