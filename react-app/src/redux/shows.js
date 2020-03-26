@@ -1,5 +1,3 @@
-import showList from "../components/showList"
-
 export function addShow(show) {
     return {
         type: "ADD_SHOW",
@@ -14,8 +12,7 @@ export function deleteShow(show) {
     }
 }
 
-function showReducer(shows = showList, action) {
-    console.log(shows)
+function showReducer(shows = [], action) {
     switch(action.type) {
         case "ADD_SHOW":
             return [...shows, action.payload]
