@@ -1,4 +1,4 @@
-import showList from "../components/showList"
+import showsList from "../components/showsList"
 
 export function addShow(show) {
     return {
@@ -14,7 +14,7 @@ export function deleteShow(show) {
     }
 }
 
-function showReducer(shows = showList, action) {
+function showReducer(shows = showsList, action) {
     console.log(shows)
     switch(action.type) {
         case "ADD_SHOW":
