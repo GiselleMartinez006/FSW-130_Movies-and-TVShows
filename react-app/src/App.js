@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Movies from "./components/movieComponent";
-import TVShows from "./components/tvShowsComponent";
+import TvShows from "./components/tvShowsComponent";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -28,7 +28,10 @@ function App(props) {
           exact
           render={() => <Movies movieArray={props.movies} />}
         />
-        <Route path="/tvshows" component={TVShows} />
+        <Route 
+          path="/shows" 
+          render={() => <TvShows showArray={props.shows} />}
+        />
       </Switch>
       <Footer />
     </main>

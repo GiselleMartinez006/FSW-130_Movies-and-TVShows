@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../styling/movies.css"
 
 class Movie extends React.Component {
