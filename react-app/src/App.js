@@ -28,7 +28,11 @@ function App(props) {
           exact
           render={() => <Movies movieArray={props.movies} />}
         />
-        <Route path="/tvshows" component={TVShows} />
+        <Route
+          path="/shows"
+          exact
+          render={() => <TVShows showArray={props.shows} />}
+        />
       </Switch>
       <Footer />
     </main>
