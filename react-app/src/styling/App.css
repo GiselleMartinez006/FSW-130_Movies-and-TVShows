@@ -4,7 +4,8 @@ html {
   background-size: cover;
 }
 
-.movies {
+.movies,
+.shows {
   border-bottom: 5px solid brown;
   background: rgba(255, 255, 255, 0.411);
 }
@@ -14,6 +15,7 @@ html {
   text-decoration: underline;
   color: rgb(68, 54, 54);
   font-family: georgia;
+  margin-top: 0px;
 }
 
 h1 {
@@ -24,6 +26,7 @@ h1 {
 
 @media only screen and (max-width: 500px) {
   .mainHeading {
+    margin-top: 25px;
     font-size: 2.5em;
   }
   h1 {
@@ -33,5 +36,10 @@ h1 {
 @media only screen and (max-width: 400px) {
   h1 {
     font-size: 1em;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .home-heading {
+    margin-top: 0;
   }
 }
