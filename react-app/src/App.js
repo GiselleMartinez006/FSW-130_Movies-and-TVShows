@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
+import "./styling/App.css";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Movies from "./components/movieComponent";
 import TVShows from "./components/tvShowsComponent";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
+import Nav from "./components/Nav";
 
 function App(props) {
   return (
@@ -13,13 +14,13 @@ function App(props) {
       style={{
         display: "grid",
         height: "95vh",
-        gridTemplateRows: "auto 15vh",
-        gridGap: "5vh",
+        gridTemplateRows: "10vh auto 15vh",
+
         overflowY: "auto"
       }}
     >
       {console.log(props)}
-
+      <Nav />
       <Switch>
         <Route exact path="/" exact render={() => <Home />} />
         <Route
@@ -28,7 +29,11 @@ function App(props) {
           exact
           render={() => <Movies movieArray={props.movies} />}
         />
-        <Route path="/tvshows" component={TVShows} />
+        <Route
+          path="/shows"
+          exact
+          render={() => <TVShows showArray={props.shows} />}
+        />
       </Switch>
       <Footer />
     </main>
